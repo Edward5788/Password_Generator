@@ -1,4 +1,7 @@
 
+# Add more comments... ;)
+
+
 def passwordManager():
     
     # Attempting to import colorama
