@@ -1,4 +1,9 @@
+"""
+---- READ ----
+This pyuthon file is purely for testing and not related or used in anyway to the actual password generator
+Feel free to test anything in this file
 
+"""
 import time
 
 
