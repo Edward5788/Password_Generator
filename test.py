@@ -1,28 +1,26 @@
 
+import time
+
+
 def main():
     print("Shalom to you all!")
     loop = False
     printCounter = 0
     while loop == False:
-        
+
         print("Testing...")
         printCounter = printCounter + 1
-        
+
         time.sleep(0.443)
         if printCounter == 2:
             calc = 0.443 * 2
             print("Calc: " + str(calc))
             loop = True
-        
-        
 
-    
-import time
+
 start_time = time.time()
 main()
 print("--- %s seconds ---" % (time.time() - start_time))
-
-
 
 
 """
