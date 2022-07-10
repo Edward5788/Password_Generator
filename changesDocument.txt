@@ -1,6 +1,7 @@
 Change log:
 
 10/07/2022:
-
-In main.py
-- Changed all possibleYes and No answers variables down to 2 variables instead of creating a new variable name for each input.
+- Added exit program feature to securely exit the program.
+- Removed variables that didn't need to exist (e.g PossibleYes (and No) option variables, now moved to using 1 pair.
+- Added a clipboard wiper to Display.py
+- Renamed test.py to TestLab.py to better fit the general naming structure
