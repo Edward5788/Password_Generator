@@ -1,0 +1,6 @@
+Change log:
+
+10/07/2022:
+
+In main.py
+- Changed all possibleYes and No answers variables down to 2 variables instead of creating a new variable name for each input.

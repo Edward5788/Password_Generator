@@ -3,21 +3,25 @@ def addToClipBoard(clipboardItem):
     pyperclip.copy(clipboardItem)
     spam = pyperclip.paste()
 
-generatedPasswordsCount = 0
-def passwordDisplay(copyToClipboardOn, newPassword):
 
+generatedPasswordsCount = 0
+
+
+def passwordDisplay(copyToClipboardOn, newPassword):
 
     if copyToClipboardOn == True:
         global clipboardItem
         clipboardItem = ""
         clipboardItem = clipboardItem + newPassword
-        
+
         addToClipBoard(clipboardItem)
 
         print("\nPassword: " + str(newPassword))
-        
-        newPasswordLength = len(newPassword) # Getting length of new passsword.
-        print("Password length: " + "{:,}".format(newPasswordLength)) # Formats the password length to add a comma if the number goes above 1000 making it 1,000
+
+        # Getting length of new passsword.
+        newPasswordLength = len(newPassword)
+        # Formats the password length to add a comma if the number goes above 1000 making it 1,000
+        print("Password length: " + "{:,}".format(newPasswordLength))
 
         print("Password is sucessfully copied to clipbaord")
         """
@@ -27,8 +31,27 @@ def passwordDisplay(copyToClipboardOn, newPassword):
             print("Total amount of generated passwords: " + str(generatedPasswordsCount) + "\n\n")
             """
 
-        
     else:
         print("Password not copied to clipboard.")
-        
-        
+
+
+def exitProgramClipboardWiper():
+
+    global clipboardItem
+    clipboardItem = ""  # Makes the clipboard nothing
+
+    # Wipes cliupboard by adding "" (nothing) to the clipboard
+    try:
+        addToClipBoard(clipboardItem)
+        print("Clipboard is sucessfully cleared")
+    except:
+        print("Program failed to clear clipboard, try copying something else to yoru clipboard instead")
+
+
+""" Testing
+copyToClipboardOn = True
+newPassword = "If you see this, it's copied to clipboard."
+passwordDisplay(copyToClipboardOn, newPassword)
+"""
+# ----Testing if the new wiping funtion works----
+exitProgramClipboardWiper()
